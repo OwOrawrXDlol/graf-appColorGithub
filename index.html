@@ -18,32 +18,59 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
 
-            <!-- Controles -->
-            <div class="mb-3">
-                <label class="form-label">Rojo (R)</label>
-                <input type="range" class="form-range" id="red" min="0" max="255" value="0">
+<div class="row justify-content-center">
+    <div class="col-md-8 neon-card">
+
+        <div class="row align-items-center">
+            <!-- Controles RGB -->
+            <div class="col-md-9">
+
+                <!-- Rojo -->
+                <div class="mb-3">
+                    <label class="form-label text-neon-red">Rojo (R)</label>
+                    <div class="d-flex gap-2 align-items-center">
+                        <input type="range" class="form-range red-range" id="red" min="0" max="255">
+                        <input type="number" class="form-control number-input" id="redNum" min="0" max="255">
+                    </div>
+                </div>
+
+                <!-- Verde -->
+                <div class="mb-3">
+                    <label class="form-label text-neon-green">Verde (G)</label>
+                    <div class="d-flex gap-2 align-items-center">
+                        <input type="range" class="form-range green-range" id="green" min="0" max="255">
+                        <input type="number" class="form-control number-input" id="greenNum" min="0" max="255">
+                    </div>
+                </div>
+
+                <!-- Azul -->
+                <div class="mb-3">
+                    <label class="form-label text-neon-blue">Azul (B)</label>
+                    <div class="d-flex gap-2 align-items-center">
+                        <input type="range" class="form-range blue-range" id="blue" min="0" max="255">
+                        <input type="number" class="form-control number-input" id="blueNum" min="0" max="255">
+                    </div>
+                </div>
+
             </div>
 
-            <div class="mb-3">
-                <label class="form-label">Verde (G)</label>
-                <input type="range" class="form-range" id="green" min="0" max="255" value="0">
+            <!-- Color Picker cuadrado -->
+            <div class="col-md-3 text-center">
+                <label class="form-label text-neon">Color</label>
+                <input type="color" id="colorPicker" class="neon-color-picker">
             </div>
-
-            <div class="mb-3">
-                <label class="form-label">Azul (B)</label>
-                <input type="range" class="form-range" id="blue" min="0" max="255" value="0">
-            </div>
-
-            <!-- Recuadro del color -->
-            <div id="colorBox" class="color-box mb-3"></div>
-
-            <!-- Valores -->
-            <p class="text-center fw-bold" id="rgbValue">RGB(0, 0, 0)</p>
-            <p class="text-center fw-bold" id="hexValue">#000000</p>
-
         </div>
+
+        <!-- Recuadro del color -->
+        <div id="colorBox" class="color-box-neon mt-4"></div>
+
+        <!-- Valores -->
+        <p class="text-center neon-text mt-3" id="rgbValue">RGB(0, 0, 0)</p>
+        <p class="text-center neon-text" id="hexValue">#000000</p>
+
     </div>
 </div>
+
 
 <!-- JS propio -->
 <script src="script.js"></script>
